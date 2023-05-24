@@ -1,0 +1,120 @@
+@import "../../App.scss";
+
+.AboutUs {
+  background-color: #151212;
+  width: 100%;
+  padding: 4rem 0rem;
+  &-heading {
+    padding: 3rem 0rem;
+    background-color: #100f0f;
+    padding-left: 30px;
+    box-sizing: border-box;
+    h2 {
+      color: white;
+      font-family: $ralewayfont;
+      font-size: 68px;
+      font-weight: 800;
+    }
+  }
+  &-main {
+    width: 95%;
+    max-width: 1700px;
+    margin-inline: auto;
+    .Chef-Details {
+      @include flexprop(center);
+      padding: 3rem 0rem;
+      width: 90%;
+      margin-inline: auto;
+      &-left-section {
+        width: 40%;
+        h4 {
+          color: white;
+          font-family: $ropa;
+          font-size: 35px;
+          font-weight: 400;
+        }
+        h6 {
+          font-family: $ropa;
+          color: white;
+          font-size: 20px;
+          margin: 10px 0px;
+        }
+        p {
+          font-family: $ropa;
+          color: white;
+          letter-spacing: 0.5px;
+          word-spacing: 2px;
+          max-width: 400px;
+          line-height: 1.2;
+        }
+      }
+      &-right-section {
+        width: 60%;
+        @include flexprop(center);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .AboutUs {
+    &-heading {
+      width: 1700px;
+      margin-inline: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .AboutUs {
+    padding: 1rem 0rem;
+    &-heading {
+      h2 {
+        font-size: 55px;
+      }
+    }
+    &-main {
+      .Chef-Details {
+        flex-direction: column !important;
+        row-gap: 30px;
+        &-left-section {
+          width: 80%;
+          text-align: center;
+        }
+        &-right-section {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .AboutUs {
+    &-heading {
+      h2 {
+        font-size: 40px;
+      }
+    }
+    &-main {
+      .Chef-Details {
+        &-left-section {
+          width: 90%;
+        }
+        &-right-section {
+          width: 90%;
+          img {
+            width: 90%;
+            height: 300px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

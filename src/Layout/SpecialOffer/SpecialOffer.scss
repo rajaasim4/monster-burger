@@ -1,0 +1,140 @@
+@import "../../App.scss";
+
+.SpecialOffer {
+  padding: 9rem 0rem;
+  background-color: #121212;
+  &-main {
+    width: 95%;
+    margin-inline: auto;
+    max-width: 1700px;
+    @include flexprop(space-between);
+    h2 {
+      font-size: 66px;
+      color: white;
+      font-weight: 800;
+      font-family: $sarabunfont;
+      line-height: 1.2;
+    }
+    h3 {
+      font-family: $ropa;
+      color: white;
+      font-size: 50px;
+      font-weight: 400;
+    }
+    button {
+      background-color: #ff2d49;
+      width: 150px;
+      height: 50px;
+      border: 0;
+      color: white;
+      font-size: 24px;
+      border-radius: 10px;
+      font-family: $ropa;
+    }
+    &-left {
+      width: 70%;
+      @include flexprop(space-between);
+      &-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+      }
+      img {
+        width: 60%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-right {
+      width: 28%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 25px;
+      row-gap: 20px;
+      p {
+        color: white;
+        font-size: 18px;
+        font-family: $ropa;
+      }
+      h4 {
+        color: white;
+        font-size: 35px;
+        font-family: $sarabunfont;
+        del {
+          font-size: 20px;
+          margin-left: 10px;
+          text-decoration: line-through;
+          color: #ff2d49;
+        }
+      }
+      button:last-child {
+        border-radius: 30px;
+        cursor: pointer;
+        height: 55px;
+        width: 190px;
+        background: $btn_bg;
+        &:hover {
+          background: $btn_bg_hover;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .SpecialOffer {
+    &-main {
+      &-right {
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .SpecialOffer {
+    &-main {
+      flex-direction: column;
+      h2 {
+        font-size: 55px;
+      }
+      h3 {
+        font-size: 40px;
+      }
+      &-left {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 30px;
+        align-items: flex-start;
+
+        img {
+          align-self: center;
+        }
+      }
+      &-right {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 540px) {
+  .SpecialOffer {
+    &-main {
+      h2 {
+        font-size: 40px;
+        // text-align: center;
+      }
+      h3 {
+        font-size: 30px;
+        // text-align: center;
+      }
+      &-left {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

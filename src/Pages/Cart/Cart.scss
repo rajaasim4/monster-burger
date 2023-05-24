@@ -1,0 +1,76 @@
+@import "../../App.scss";
+.CartSection {
+  background-color: #1a1a1a;
+  padding: 5rem 0rem;
+  &-main {
+    width: 95%;
+    margin-inline: auto;
+    .Cart-billing {
+      width: 55%;
+      margin: 40px 0px;
+      margin-inline: auto;
+      &-heading {
+        @include flexprop(space-between);
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+        h4 {
+          color: white;
+          font-family: $ropa;
+          font-size: 40px;
+        }
+        h5 {
+          color: white;
+          font-family: $ropa;
+          font-size: 30px;
+        }
+      }
+    }
+    .Cart-items {
+      @include flexprop(center);
+      flex-direction: column;
+      row-gap: 30px;
+      h1 {
+        color: white;
+        font-size: 60px;
+      }
+      .Cart-Menu_btn {
+        background: $btn_bg;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        color: white;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 10px;
+        font-family: $ropa;
+        &:hover {
+          background: $btn_bg_hover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .CartSection {
+    &-main {
+      .Cart-items {
+        h1 {
+          text-align: center;
+        }
+      }
+      .Cart-billing {
+        width: 95%;
+        &-heading {
+          h4 {
+            font-size: 30px;
+          }
+          h5 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

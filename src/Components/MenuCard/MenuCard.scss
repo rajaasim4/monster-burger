@@ -1,0 +1,103 @@
+@import "../../App.scss";
+.MenuCard {
+  width: 600px;
+  height: 300px;
+  background-color: #151212;
+  border-radius: 10px;
+  position: relative;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  &:hover &-hoverimg {
+    translate: 0px 0px;
+  }
+  &:hover {
+    background-color: black;
+  }
+  &-hoverimg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    translate: 82px 82px;
+    transition: all 0.3s linear;
+  }
+  @include flexprop(space-evenly);
+  &-left-section {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &-right-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    button {
+      color: white;
+      background: $btn_bg;
+      font-size: 18px;
+      width: 80px;
+      height: 30px;
+      border: 0;
+      border-radius: 5px;
+    }
+    h4 {
+      color: white;
+      font-size: 30px;
+      font-family: $ralewayfont;
+      font-weight: 700;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $ralewayfont;
+      width: 80%;
+      line-height: 1.2;
+      word-spacing: 2px;
+      letter-spacing: 0.5px;
+    }
+    h5 {
+      color: white;
+      font-family: $sarabunfont;
+      font-size: 25px;
+      del {
+        text-decoration: line-through;
+
+        font-weight: 400;
+        color: #ff274c;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+    }
+    .Menu-cart {
+      cursor: pointer;
+      width: 140px;
+      font-size: 16px;
+      height: 40px;
+      @include flexprop(space-evenly);
+      &:hover {
+        background: $btn_bg_hover;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .MenuCard {
+    flex-direction: column;
+    height: max-content;
+    padding: 20px 0px;
+    &-left-section {
+      width: 95%;
+    }
+
+    &-right-section {
+      width: 95%;
+      align-items: center;
+      z-index: 11;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@import "../../App.scss";
+.DeliciousFood {
+  height: 800px;
+  padding: 70px 0px;
+  @include flexprop(center);
+
+  background-color: #100e0e;
+  &-main {
+    @include flexprop(space-evenly);
+    width: 95%;
+    margin-inline: auto;
+    height: 100%;
+    max-width: 1700px;
+    .DeliciousFood-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      h2 {
+        font-size: 68px;
+        color: white;
+        font-weight: 800;
+        font-family: $sarabunfont;
+      }
+      h3 {
+        font-family: $ropa;
+        color: white;
+        font-size: 50px;
+        font-weight: 400;
+      }
+      p {
+        color: white;
+        font-family: $ropa;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      button {
+        width: 180px;
+        background: $btn_bg;
+        height: 55px;
+        border-radius: 30px;
+        cursor: pointer;
+        color: white;
+        font-size: 18px;
+        border: 0;
+        transition: all 0.4s linear;
+        &:hover {
+          background: $btn_bg_hover;
+        }
+      }
+    }
+    .DeliciousFood-right {
+      width: 50%;
+      padding-left: 50px;
+      @include flexprop(center);
+      background-image: url("../../assets/Images/Delicious_food_img.png");
+      // height: 800px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: 68px;
+        color: white;
+        font-weight: 900;
+        font-family: $sarabunfont;
+      }
+      h3 {
+        font-family: $ropa;
+        color: white;
+        font-size: 60px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .DeliciousFood {
+    &-main {
+      .DeliciousFood-left {
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .DeliciousFood {
+    &-main {
+      flex-direction: column-reverse;
+      row-gap: 40px;
+
+      .DeliciousFood-left {
+        width: 90%;
+        h2 {
+          font-size: 55px;
+        }
+        h3 {
+          font-size: 40px;
+        }
+      }
+      .DeliciousFood-right {
+        width: 95%;
+        height: 60%;
+        background-position: right;
+        background-size: contain;
+        align-items: flex-start;
+
+        // h2 {
+        //   font-size: 55px;
+        // }
+        // h3 {
+        //   font-size: 50px;
+        // }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .DeliciousFood {
+    &-main {
+      .DeliciousFood-left {
+        h2 {
+          font-size: 40px;
+          text-align: center;
+        }
+        h3 {
+          font-size: 30px;
+          text-align: center;
+        }
+        p {
+          font-size: 18px;
+          text-align: center;
+        }
+        button {
+          margin-inline: auto;
+        }
+      }
+      .DeliciousFood-right {
+        padding-left: 10px;
+        h2 {
+          font-size: 40px;
+        }
+        h3 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}

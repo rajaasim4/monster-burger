@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.TopHeading {
+  min-height: 300px;
+
+  background-color: #121212;
+  background-image: url("../../assets/Images/Section_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  display: flex;
+  align-items: end;
+  padding-left: 20px;
+  h1 {
+    font-size: 200px;
+    color: white;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 1700px) {
+  .TopHeading {
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .TopHeading {
+    height: auto;
+    h1 {
+      font-size: 19vw;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .TopHeading {
+    min-height: 140px;
+    align-items: center;
+  }
+}

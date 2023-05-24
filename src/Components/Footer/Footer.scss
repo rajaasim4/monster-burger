@@ -1,0 +1,90 @@
+@import "../../App.scss";
+footer {
+  background-color: #151212;
+  padding: 5rem 0rem 1rem 0rem;
+  .footer-main {
+    width: 95%;
+    max-width: 1700px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .footer-section-1 {
+      @include flexprop(start);
+    }
+    address {
+      color: white;
+      font-style: normal;
+      font-family: $sarabunfont;
+      svg {
+        color: #ff274c;
+        font-size: 25px;
+        margin-right: 15px;
+      }
+    }
+    .Footer-Social {
+      @include flexprop(center);
+      //   align-items: flex-start;
+
+      flex-direction: column;
+      row-gap: 10px;
+      a {
+        font-family: $sarabunfont;
+        color: white;
+        @include flexprop(center);
+        transition: 0.4s linear;
+        column-gap: 4px;
+        svg {
+          font-size: 25px;
+          color: #ff274c;
+        }
+        &:hover {
+          color: #ff274c;
+        }
+      }
+    }
+  }
+  p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: $ralewayfont;
+    padding: 20px 0px;
+    span {
+      font-family: $krubfont;
+      font-style: italic;
+      font-weight: 700;
+      margin: 0px 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+}
+
+@media (max-width: 768px) {
+  footer {
+    .footer-main {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+      .footer-section-1 {
+        @include flexprop(center);
+      }
+      .footer-section-2 {
+        @include flexprop(center);
+        address {
+          row-gap: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    p {
+      font-size: 18px;
+      padding: 0px 10px;
+      box-sizing: border-box;
+      margin: 10px 0px;
+    }
+  }
+}

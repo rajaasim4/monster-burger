@@ -1,0 +1,134 @@
+@import "../../App.scss";
+.Contact {
+  background-color: #121212;
+  padding: 3rem 0rem;
+  &-main {
+    width: 95%;
+    margin-inline: auto;
+    max-width: 1700px;
+    .Contact-form {
+      width: 60%;
+      margin-inline: auto;
+    }
+    .form-input {
+      label {
+        color: white;
+        font-size: 20px;
+        font-family: $ralewayfont;
+      }
+      input {
+        width: 70%;
+        height: 45px;
+        border-radius: 20px;
+        margin: 10px 0px;
+        background-color: black;
+        border: 2px solid #131212;
+        outline: 0;
+        color: white;
+        font-size: 16px;
+        padding-left: 20px;
+      }
+      textarea {
+        width: 70%;
+        min-height: 200px;
+        border-radius: 20px;
+        margin: 10px 0px;
+        background-color: black;
+        border: 2px solid #151212;
+        outline: 0;
+        color: white;
+        font-size: 16px;
+        padding: 20px;
+        font-family: $ralewayfont;
+        resize: none;
+      }
+    }
+    button {
+      width: 180px;
+      background: $btn_bg;
+      height: 60px;
+      border-radius: 30px;
+      cursor: pointer;
+      color: white;
+      font-size: 18px;
+      border: 0;
+      transition: all 0.4s linear;
+      &:hover {
+        background: $btn_bg_hover;
+      }
+    }
+  }
+  &-map {
+    margin-top: 30px;
+    overflow: hidden;
+    padding: 30px 0px;
+    iframe {
+      width: 100%;
+      border: 0;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .Contact {
+    &-main {
+      .Contact-form {
+        width: 90%;
+        .form-input {
+          margin-top: 30px;
+          label {
+            font-size: 30px;
+          }
+          input {
+            height: 70px;
+            font-size: 30px;
+          }
+          textarea {
+            font-size: 30px;
+          }
+        }
+        button {
+          font-size: 25px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .Contact {
+    &-main {
+      .Contact-form {
+        margin-top: 40px;
+        width: 90%;
+        .form-input {
+          input {
+            width: 90%;
+          }
+          textarea {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 540px) {
+  .Contact {
+    padding: 20px 0px;
+    &-main {
+      .Contact-form {
+        margin-top: 10px;
+        width: 90%;
+        .form-input {
+          input {
+            width: 90%;
+          }
+          textarea {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

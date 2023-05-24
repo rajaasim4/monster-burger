@@ -1,0 +1,179 @@
+@import "../../App.scss";
+.Hero {
+  background-color: #161515;
+  padding: 10px 0px;
+  &-main {
+    width: 95%;
+    max-width: 1700px;
+    margin-inline: auto;
+    @include flexprop(space-between);
+    &-left {
+      width: 30%;
+      h3 {
+        font-family: $ropa;
+        font-size: 40px;
+        color: white;
+        margin-bottom: 40px;
+        font-weight: 400;
+      }
+      .Hero-paragraph {
+        p {
+          font-family: $ropa;
+          color: white;
+          line-height: 1.3;
+          font-size: 18px;
+        }
+      }
+      button {
+        margin-top: 30px;
+        width: 180px;
+        background: transparent;
+        height: 55px;
+        border-radius: 30px;
+        cursor: pointer;
+        color: white;
+        font-size: 18px;
+        border: 2px solid $btn_border;
+        transition: all 0.4s linear;
+        &:hover {
+          background: #ff2d49;
+        }
+      }
+    }
+    &-right {
+      width: 70%;
+      position: relative;
+
+      h1 {
+        color: white;
+        position: absolute;
+        top: 10%;
+        left: 6%;
+        font-size: 13vw;
+        line-height: 1;
+        letter-spacing: 20px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .Hero-float-img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      }
+      .Hero-float-img2 {
+        top: 0;
+        right: 40%;
+      }
+      .Hero-float-img1 {
+        top: 10%;
+        left: 0;
+      }
+      h3 {
+        color: white;
+        position: absolute;
+        bottom: 35%;
+        right: 0%;
+        font-family: $krubfont;
+        font-size: 30px;
+      }
+    }
+  }
+  .Hero-social {
+    padding-left: 20px;
+    display: flex;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    max-width: 1600px;
+
+    a {
+      color: white;
+      font-family: $ropa;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .Hero {
+    padding: 4rem 0rem;
+    &-main {
+      &-left {
+        .Hero-paragraph {
+          P {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .Hero-social {
+      margin-inline: auto;
+      padding: 2rem 0rem;
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .Hero {
+    &-main {
+      flex-direction: column-reverse;
+      &-left {
+        width: 70%;
+        margin-bottom: 50px;
+      }
+      &-right {
+        width: 80%;
+        h1 {
+          font-size: 15vw;
+        }
+        .Hero-float-img2 {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Hero {
+    &-main {
+      &-right {
+        .Hero-float-img {
+          display: none;
+        }
+        h3 {
+          font-size: 25px;
+          bottom: 20%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .Hero {
+    &-main {
+      overflow: hidden;
+      row-gap: 40px;
+      &-left {
+        width: 90%;
+      }
+      &-right {
+        h1 {
+          left: 0;
+          top: 20%;
+          font-size: 12vw;
+        }
+        h3 {
+          font-size: 18px;
+          bottom: 5%;
+        }
+      }
+    }
+  }
+}

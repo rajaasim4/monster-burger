@@ -1,0 +1,76 @@
+@import "../../App.scss";
+
+.NewsLetter {
+  background-color: #121212;
+  padding: 4rem 0rem;
+  background-image: url("../../assets/Images/NewsLetter_section_bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60% 30%;
+  &-main {
+    width: 95%;
+    margin-inline: auto;
+    min-height: 400px;
+    h2 {
+      font-family: $sarabunfont;
+      font-size: 68px;
+      color: white;
+      text-align: center;
+      font-weight: 900;
+    }
+    .NewsLetter-input {
+      margin-top: 40px;
+      height: 100px;
+      width: 70%;
+      margin-inline: auto;
+      background-color: #161515;
+      border-radius: 10px;
+      @include flexprop(center);
+      input {
+        width: 90%;
+        height: 50px;
+        padding-left: 10px;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        font-size: 20px;
+      }
+      span {
+        color: white;
+        font-size: 45px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .NewsLetter {
+    background-size: contain;
+    &-main {
+      .NewsLetter-input {
+        height: 80px;
+        width: 85%;
+      }
+    }
+  }
+}
+@media (max-width: 540px) {
+  .NewsLetter {
+    &-main {
+      h2 {
+        font-size: 15vw;
+      }
+      .NewsLetter-input {
+        height: 80px;
+        width: 85%;
+        input {
+          font-size: 16px;
+        }
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

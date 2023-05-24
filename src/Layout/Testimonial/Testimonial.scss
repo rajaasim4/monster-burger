@@ -1,0 +1,103 @@
+@import "../../App.scss";
+
+.Testimonial {
+  background-color: #100e0e;
+  padding: 6rem 0rem;
+  background-image: url("../../assets/Images/Testimonial_section_bg.png");
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  &-main {
+    width: 95%;
+    margin-inline: auto;
+    max-width: 1700px;
+    h2 {
+      font-size: 68px;
+      color: white;
+      font-weight: 800;
+      font-family: $sarabunfont;
+    }
+    h3 {
+      font-family: $ropa;
+      color: white;
+      font-size: 50px;
+      font-weight: 400;
+    }
+    .Slider_btn {
+      margin-top: 30px;
+      display: flex;
+      column-gap: 20px;
+      position: relative;
+      button {
+        border: 0;
+        background-color: transparent;
+
+        cursor: pointer;
+        svg {
+          color: white;
+          font-size: 30px;
+        }
+      }
+    }
+    .Testimonial-Slider {
+      width: 430px;
+      .main-Slider {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+          // text-align: center;
+          font-size: 18px;
+
+          @include flexprop(center);
+        }
+      }
+      .Testimonial-Slider-main {
+        margin-top: 40px;
+        h4 {
+          color: white;
+          font-family: $sarabunfont;
+          font-size: 30px;
+          font-weight: 400;
+        }
+        p {
+          margin-top: 20px;
+          color: white;
+          font-family: $ropa;
+          font-size: 18px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .Testimonial {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 540px) {
+  .Testimonial {
+    background-size: cover;
+    &-main {
+      h2 {
+        font-size: 40px;
+        // text-align: center;
+      }
+      h3 {
+        font-size: 30px;
+        // text-align: center;
+      }
+      .Testimonial-Slider {
+        width: 90%;
+        margin-inline: auto;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
