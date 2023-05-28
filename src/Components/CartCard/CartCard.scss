@@ -84,6 +84,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .CartCard {
+    width: 90%;
+  }
+}
+
 @media (max-width: 540px) {
   .CartCard {
     flex-direction: column;

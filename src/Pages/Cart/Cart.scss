@@ -51,7 +51,15 @@
     }
   }
 }
-
+@media (max-width: 768px) {
+  .CartSection {
+    &-main {
+      .Cart-billing {
+        width: 90%;
+      }
+    }
+  }
+}
 @media (max-width: 540px) {
   .CartSection {
     &-main {

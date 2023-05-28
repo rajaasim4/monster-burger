@@ -52,9 +52,8 @@ const NavBar = () => {
               </li>
             </ul>
             <div className="Nav-Btn">
-              <Link to="/Cart">
+              <Link to="/Cart" onClick={showNavBar}>
                 <button>
-                  {/* Cart */}
                   <div className="Cart">
                     <BsCart2 />
                     <span>{totalQunatity}</span>
