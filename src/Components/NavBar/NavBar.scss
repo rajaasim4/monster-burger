@@ -39,11 +39,9 @@ nav {
           cursor: pointer;
           color: white;
           font-size: 20px;
-          //   // border: 2px solid $btn_border;
-          //   transition: all 0.4s linear;
-          //   outline: 0;
+          border: 0;
           @include flexprop(space-evenly);
-          // box-shadow: 0;
+          box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.8);
           .Cart {
             width: 30%;
             height: 40%;
@@ -75,7 +73,7 @@ nav {
           width: 60%;
           li {
             a {
-              font-size: 30px;
+              font-size: 25px;
             }
           }
         }

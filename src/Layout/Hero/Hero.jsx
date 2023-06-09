@@ -1,4 +1,3 @@
-import { Fade } from "react-awesome-reveal";
 import {
   AiOutlineTwitter,
   FaFacebookF,
@@ -29,7 +28,7 @@ const Hero = () => {
         <div className="Hero-main-right">
           <h1>Monster Burger</h1>
 
-          <img src={BurgerImg} loading="lazy" alt="" />
+          <img src={BurgerImg} loading="lazy" alt="" className="Hero-img" />
 
           {/* </Slide> */}
           <Parallax
